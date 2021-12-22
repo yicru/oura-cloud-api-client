@@ -4,5 +4,8 @@
   "description": "The Oura Cloud API Client",
   "main": "index.js",
   "author": "yicru",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
 }
