@@ -1,0 +1,8 @@
+{
+  "name": "oura-cloud-api-client",
+  "version": "0.0.1",
+  "description": "The Oura Cloud API Client",
+  "main": "index.js",
+  "author": "yicru",
+  "license": "ISC"
+}
