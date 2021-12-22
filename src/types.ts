@@ -105,3 +105,15 @@ export type Activity = {
   summary_date: string;
   timezone: number;
 };
+
+/**
+ * https://cloud.ouraring.com/docs/bedtime
+ */
+export type Bedtime = {
+  bedtime_window: {
+    end: number;
+    start: number;
+  };
+  date: string;
+  status: 'NOT_ENOUGH_DATA' | 'LOW_SLEEP_SCORES' | 'IDEAL_BEDTIME_AVAILABLE';
+};

@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import type {
   Activity,
+  Bedtime,
   DailySummaryParams,
   PersonalInfo,
   Readiness,
@@ -75,6 +76,22 @@ export class Client {
   getActivitySummaries = async ({ end, start }: DailySummaryParams = {}) => {
     const { data } = await this.axios.get<{ activity: Activity[] }>(
       '/v1/activity',
+      {
+        params: { end, start },
+      }
+    );
+    return data;
+  };
+
+  /**
+   * https://cloud.ouraring.com/docs/bedtime
+   *
+   * @param end
+   * @param start
+   */
+  getIdealBedtimes = async ({ end, start }: DailySummaryParams = {}) => {
+    const { data } = await this.axios.get<{ ideal_bedtimes: Bedtime[] }>(
+      '/v1/bedtime',
       {
         params: { end, start },
       }
