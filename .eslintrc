@@ -1,6 +1,20 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": ["plugin:@typescript-eslint/recommended", "eslint:recommended"],
+  "plugins": [
+    "simple-import-sort",
+    "sort-keys-fix",
+    "sort-destructure-keys",
+    "typescript-sort-keys"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-destructure-keys/sort-destructure-keys": "warn",
+    "typescript-sort-keys/interface": "warn",
+    "typescript-sort-keys/string-enum": "warn"
+  },
   "env": {
     "browser": true,
     "node": true,
