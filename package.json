@@ -14,6 +14,9 @@
     "format:prettier": "prettier -w .",
     "format:eslint": "npm run lint:eslint --fix"
   },
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
