@@ -1,8 +1,8 @@
 import type { AxiosInstance } from 'axios';
 import axios from 'axios';
 
-import { Constants } from './constants';
 import type { PersonalInfo } from '../types';
+import { Constants } from './constants';
 
 /**
  * Oura Cloud API Client
