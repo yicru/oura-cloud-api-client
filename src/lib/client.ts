@@ -2,6 +2,7 @@ import type { AxiosInstance } from 'axios';
 import axios from 'axios';
 
 import type {
+  Activity,
   DailySummaryParams,
   PersonalInfo,
   Readiness,
@@ -61,6 +62,23 @@ export class Client {
     const { data } = await this.axios.get<{ sleep: Sleep[] }>('/v1/sleep', {
       params: { end, start },
     });
+    return data;
+  };
+
+  /**
+   * https://cloud.ouraring.com/docs/daily-summaries
+   * https://cloud.ouraring.com/docs/activity
+   *
+   * @param end
+   * @param start
+   */
+  getActivitySummaries = async ({ end, start }: DailySummaryParams = {}) => {
+    const { data } = await this.axios.get<{ activity: Activity[] }>(
+      '/v1/activity',
+      {
+        params: { end, start },
+      }
+    );
     return data;
   };
 }

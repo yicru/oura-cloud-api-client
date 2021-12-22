@@ -68,3 +68,40 @@ export type Sleep = {
   timezone: number;
   total: number;
 };
+
+/**
+ * https://cloud.ouraring.com/docs/activity
+ */
+export type Activity = {
+  average_met: number;
+  cal_active: number;
+  cal_total: number;
+  class_5min: string;
+  daily_movement: number;
+  day_end: string;
+  day_start: string;
+  high: number;
+  inactive: number;
+  inactivity_alerts: number;
+  low: number;
+  medium: number;
+  met_1min: number[];
+  met_min_high: number;
+  met_min_inactive: number;
+  met_min_low: number;
+  met_min_medium: number;
+  met_min_medium_plus: number;
+  non_wear: number;
+  rest: number;
+  rest_mode_state: number;
+  score: number;
+  score_meet_daily_targets: number;
+  score_move_every_hour: number;
+  score_recovery_time: number;
+  score_stay_active: number;
+  score_training_frequency: number;
+  score_training_volume: number;
+  steps: number;
+  summary_date: string;
+  timezone: number;
+};
