@@ -6,6 +6,7 @@
   "author": "yicru",
   "license": "ISC",
   "scripts": {
+    "typecheck": "tsc --noEmit",
     "lint": "run-p lint:*",
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint --ext .ts src",
