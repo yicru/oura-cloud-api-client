@@ -30,3 +30,41 @@ export type Readiness = {
   score_temperature: number;
   summary_date: string;
 };
+
+/**
+ * https://cloud.ouraring.com/docs/sleep
+ */
+export type Sleep = {
+  awake: number;
+  bedtime_end: string;
+  bedtime_start: string;
+  breath_average: number;
+  deep: number;
+  duration: number;
+  efficiency: number;
+  hr_5min: number[];
+  hr_average: number;
+  hr_lowest: number;
+  hypnogram_5min: string;
+  is_longest: number;
+  light: number;
+  midpoint_time: number;
+  onset_latency: number;
+  period_id: number;
+  rem: number;
+  restless: number;
+  rmssd: number;
+  rmssd_5min: number[];
+  score: number;
+  score_alignment: number;
+  score_deep: number;
+  score_disturbances: number;
+  score_efficiency: number;
+  score_latency: number;
+  score_rem: number;
+  score_total: number;
+  summary_date: string;
+  temperature_delta: number;
+  timezone: number;
+  total: number;
+};

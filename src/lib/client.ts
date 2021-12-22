@@ -1,7 +1,12 @@
 import type { AxiosInstance } from 'axios';
 import axios from 'axios';
 
-import type { DailySummaryParams, PersonalInfo, Readiness } from '../types';
+import type {
+  DailySummaryParams,
+  PersonalInfo,
+  Readiness,
+  Sleep,
+} from '../types';
 import { Constants } from './constants';
 
 /**
@@ -42,6 +47,20 @@ export class Client {
         params: { end, start },
       }
     );
+    return data;
+  };
+
+  /**
+   * https://cloud.ouraring.com/docs/daily-summaries
+   * https://cloud.ouraring.com/docs/sleep
+   *
+   * @param end
+   * @param start
+   */
+  getSleepPeriods = async ({ end, start }: DailySummaryParams = {}) => {
+    const { data } = await this.axios.get<{ sleep: Sleep[] }>('/v1/sleep', {
+      params: { end, start },
+    });
     return data;
   };
 }
