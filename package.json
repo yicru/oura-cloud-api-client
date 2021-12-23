@@ -2,7 +2,8 @@
   "name": "oura-cloud-api-client",
   "version": "0.0.2",
   "description": "The Oura Cloud API Client",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "yicru",
   "license": "ISC",
   "scripts": {
@@ -13,7 +14,8 @@
     "lint:eslint": "eslint --ext .ts src",
     "format": "run-s format:*",
     "format:prettier": "prettier -w .",
-    "format:eslint": "npm run lint:eslint -- --fix"
+    "format:eslint": "npm run lint:eslint -- --fix",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "axios": "^0.24.0"

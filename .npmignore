@@ -1,0 +1,9 @@
+src/
+
+.eslintrc
+.prettierrc
+.node-version
+tsconfig.json
+
+node_modules/
+.idea/
