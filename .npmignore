@@ -1,4 +1,5 @@
 src/
+examples/
 
 .eslintrc
 .prettierrc
