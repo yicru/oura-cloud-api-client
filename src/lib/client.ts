@@ -2,12 +2,15 @@ import type { AxiosInstance } from 'axios';
 import axios from 'axios';
 
 import type {
-  Activity,
-  Bedtime,
-  DailySummaryParams,
+  ActivitySummariesParams,
+  ActivitySummariesResponse,
+  IdealBedtimesParams,
+  IdealBedtimesResponse,
   PersonalInfo,
-  Readiness,
-  Sleep,
+  ReadinessSummariesParams,
+  ReadinessSummariesResponse,
+  SleepPeriodsParams,
+  SleepPeriodsResponse,
 } from '../types';
 import { Constants } from './constants';
 
@@ -42,8 +45,11 @@ export class Client {
    * @param end
    * @param start
    */
-  getReadinessSummaries = async ({ end, start }: DailySummaryParams = {}) => {
-    const { data } = await this.axios.get<{ readiness: Readiness[] }>(
+  getReadinessSummaries = async ({
+    end,
+    start,
+  }: ReadinessSummariesParams = {}): Promise<ReadinessSummariesResponse> => {
+    const { data } = await this.axios.get<ReadinessSummariesResponse>(
       '/v1/readiness',
       {
         params: { end, start },
@@ -59,8 +65,11 @@ export class Client {
    * @param end
    * @param start
    */
-  getSleepPeriods = async ({ end, start }: DailySummaryParams = {}) => {
-    const { data } = await this.axios.get<{ sleep: Sleep[] }>('/v1/sleep', {
+  getSleepPeriods = async ({
+    end,
+    start,
+  }: SleepPeriodsParams = {}): Promise<SleepPeriodsResponse> => {
+    const { data } = await this.axios.get<SleepPeriodsResponse>('/v1/sleep', {
       params: { end, start },
     });
     return data;
@@ -73,8 +82,11 @@ export class Client {
    * @param end
    * @param start
    */
-  getActivitySummaries = async ({ end, start }: DailySummaryParams = {}) => {
-    const { data } = await this.axios.get<{ activity: Activity[] }>(
+  getActivitySummaries = async ({
+    end,
+    start,
+  }: ActivitySummariesParams = {}): Promise<ActivitySummariesResponse> => {
+    const { data } = await this.axios.get<ActivitySummariesResponse>(
       '/v1/activity',
       {
         params: { end, start },
@@ -89,8 +101,11 @@ export class Client {
    * @param end
    * @param start
    */
-  getIdealBedtimes = async ({ end, start }: DailySummaryParams = {}) => {
-    const { data } = await this.axios.get<{ ideal_bedtimes: Bedtime[] }>(
+  getIdealBedtimes = async ({
+    end,
+    start,
+  }: IdealBedtimesParams = {}): Promise<IdealBedtimesResponse> => {
+    const { data } = await this.axios.get<IdealBedtimesResponse>(
       '/v1/bedtime',
       {
         params: { end, start },

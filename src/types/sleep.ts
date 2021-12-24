@@ -42,3 +42,8 @@ export const SleepPeriodsResponseCodec = t.type({
 });
 
 export type SleepPeriodsResponse = t.TypeOf<typeof SleepPeriodsResponseCodec>;
+
+export type SleepPeriodsParams = {
+  end?: string;
+  start?: string;
+};

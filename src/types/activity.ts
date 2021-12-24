@@ -43,3 +43,8 @@ export const ActivitySummariesResponseCodec = t.type({
 export type ActivitySummariesResponse = t.TypeOf<
   typeof ActivitySummariesResponseCodec
 >;
+
+export type ActivitySummariesParams = {
+  end?: string;
+  start?: string;
+};

@@ -20,3 +20,8 @@ export const IdealBedtimesResponseCodec = t.type({
 });
 
 export type IdealBedtimesResponse = t.TypeOf<typeof IdealBedtimesResponseCodec>;
+
+export type IdealBedtimesParams = {
+  end?: string;
+  start?: string;
+};

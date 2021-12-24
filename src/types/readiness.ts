@@ -24,3 +24,8 @@ export const ReadinessSummariesResponseCodec = t.type({
 export type ReadinessSummariesResponse = t.TypeOf<
   typeof ReadinessSummariesResponseCodec
 >;
+
+export type ReadinessSummariesParams = {
+  end?: string;
+  start?: string;
+};
