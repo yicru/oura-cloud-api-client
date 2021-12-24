@@ -20,7 +20,8 @@ if (!process.env.PERSONAL_ACCESS_TOKEN) {
 const client = new Client(process.env.PERSONAL_ACCESS_TOKEN);
 
 const report = <T>(result: unknown, validation: Validation<T>) => {
-  console.error('result: ', JSON.stringify(result));
+  process.env.DISPLAY_ERROR_RESULT &&
+    console.error('result: ', JSON.stringify(result));
   console.error('validation: ', PathReporter.report(validation));
 };
 
