@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "oura-cloud-api-client": "^0.0.3"
+    "oura-cloud-api-client": "^0.0.6"
   },
   "devDependencies": {
     "ts-node": "^10.4.0",
